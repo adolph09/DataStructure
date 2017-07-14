@@ -7,16 +7,21 @@ int main()
 {
     List<char> list;
     list.init();
-    list.insert('s');
-    list.insert('z');
-    list.insert('d');
-    list.insert('w');
-    list.insert('q');
-    list.insert(list.get_head()->next->next, 'k');
+    for (int i = 0; i < 1; i++) {
+        list.insert_back('0' + i);
+    }
     list.print();
-    cout << list.find(list.get_head()->next->next) << endl;
-    cout << list.find('k') << endl;
-    cout << list.find_prev('k') << endl;
-    cout << list.find_prev('h') << endl;
-
+    cout << list.find('0') << endl;
+    cout << "len:" << list.length() << endl;
+    for (int i = 1; i <= list.length(); i++)
+        cout << "num:" << list.find(i) << endl;
+    //for (int i = 0; i <3; i++) {
+    //    list.insert(8, 'a' + i);
+    //}
+    list.insert(8, 'x');
+    list.print();
+    cout << list.get_tail()->element << endl;
+    list.destory();
+    //list.print(); // aleady destory, can't access
+    return 0;
 }
