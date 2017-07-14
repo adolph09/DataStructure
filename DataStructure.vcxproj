@@ -109,9 +109,6 @@
   <ItemGroup>
     <ClCompile Include="demo\list_demo.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="demo\.gitignore" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
